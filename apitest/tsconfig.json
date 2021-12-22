@@ -8,7 +8,6 @@
         "module": "es2020",
         "moduleResolution": "node",
         "outDir": "./out-tsc",
-        "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "sourceMap": true,
         "strict": true,
