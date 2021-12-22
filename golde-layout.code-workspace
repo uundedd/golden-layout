@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../ng6-golden-layout"
+		}
+	],
+	"settings": {
+		"typescript.tsdk": "gtui3/node_modules/typescript/lib"
+	}
+}
