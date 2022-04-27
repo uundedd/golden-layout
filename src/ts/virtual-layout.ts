@@ -116,7 +116,6 @@ export class VirtualLayout extends LayoutManager {
      * then init() will be automatically called internally and should not be called externally.
      */
     override init(): void {
-
         /**
          * If the document isn't ready yet, wait for it.
          */

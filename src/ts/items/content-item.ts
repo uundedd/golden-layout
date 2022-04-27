@@ -256,6 +256,7 @@ export abstract class ContentItem extends EventEmitter {
         const parentId = getUniqueId();
         const browserPopout = this.layoutManager.createPopoutFromContentItem(this, undefined, parentId, undefined);
         this.emitBaseBubblingEvent('stateChanged');
+        this.emit("popout", browserPopout);
         return browserPopout;
     }
 

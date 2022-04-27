@@ -22,6 +22,10 @@ import { deepExtend, getUniqueId } from '../utils/utils';
 export class BrowserPopout extends EventEmitter {
     /** @internal */
     private _popoutWindow: Window | null;
+
+    get popoutWindow (){
+        return this._popoutWindow ;
+    }
     /** @internal */
     private _isInitialised;
     /** @internal */
@@ -123,6 +127,7 @@ export class BrowserPopout extends EventEmitter {
      * parent isn't available anymore it falls back to the layout's topmost element
      */
     popIn(): void {
+        // this.emit('popIn' ,this)
         let parentItem: ContentItem;
         let index = this._config.indexInParent;
 
@@ -172,6 +177,7 @@ export class BrowserPopout extends EventEmitter {
         } else {
             this.close();
         }
+        this.emit("afterPopIn", newContentItem);
     }
 
     /**
