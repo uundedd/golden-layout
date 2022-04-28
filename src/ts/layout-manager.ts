@@ -1552,7 +1552,7 @@ export abstract class LayoutManager extends EventEmitter {
     }
 
     /** @internal */
-    private findFirstLocation(selectors: readonly LayoutManager.LocationSelector[]): LayoutManager.Location | undefined {
+    public findFirstLocation(selectors: readonly LayoutManager.LocationSelector[]): LayoutManager.Location | undefined {
         const count = selectors.length;
         for (let i = 0; i < count; i++) {
             const selector = selectors[i];
@@ -1669,7 +1669,7 @@ export abstract class LayoutManager extends EventEmitter {
     }
 
     /** @internal */
-    private tryCreateLocationFromParentItem(parentItem: ContentItem,
+    public tryCreateLocationFromParentItem(parentItem: ContentItem,
         selectorIndex: number | undefined
     ): LayoutManager.Location | undefined {
         const parentContentItems = parentItem.contentItems;
